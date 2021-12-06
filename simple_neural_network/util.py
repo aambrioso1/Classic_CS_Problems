@@ -32,6 +32,8 @@ print(f"{derivative_sigmoid(2)=}")
 
 # assume all rows are of equal length
 # and feature scale each column to be in the range 0 - 1
+# The formula for feature scaling is simple:  
+# new_Value = (old_Value - min)/(max - min)
 def normalize_by_feature_scaling(dataset: List[List[float]]) -> None:
     for col_num in range(len(dataset[0])):
         column: List[float] = [row[col_num] for row in dataset]
